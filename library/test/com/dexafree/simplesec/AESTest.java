@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 public class AESTest extends TestCase {
 
-    private final static String KEY = "MY_SECRET";
+    private final static String KEY = "MY_SUPER_SECRET_AND_LONG_KEY_THAT_YOU_WOULD_NEVER_GUESS";
 
     public void testMethods() throws Exception {
         String expected = "Hello";
