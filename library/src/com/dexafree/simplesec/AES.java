@@ -7,7 +7,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 
-public class AES256 {
+public class AES {
 
     private static final String ALGORITHM = "AES";
     private static final Base64 mBase = new Base64();
