@@ -1,5 +1,6 @@
-package com.dexafree.simplesec;
+package com.dexafree.simplesec.tests;
 
+import com.dexafree.simplesec.AES;
 import junit.framework.TestCase;
 
 public class AESTest extends TestCase {

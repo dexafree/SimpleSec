@@ -1,5 +1,6 @@
-package com.dexafree.simplesec;
+package com.dexafree.simplesec.tests;
 
+import com.dexafree.simplesec.SHA1;
 import junit.framework.TestCase;
 
 public class SHA1Test extends TestCase {

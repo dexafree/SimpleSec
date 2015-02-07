@@ -1,5 +1,6 @@
-package com.dexafree.simplesec;
+package com.dexafree.simplesec.tests;
 
+import com.dexafree.simplesec.TripleDES;
 import junit.framework.TestCase;
 
 public class TripleDESTest extends TestCase {

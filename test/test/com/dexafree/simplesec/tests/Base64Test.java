@@ -1,5 +1,6 @@
-package com.dexafree.simplesec;
+package com.dexafree.simplesec.tests;
 
+import com.dexafree.simplesec.Base64;
 import junit.framework.TestCase;
 
 public class Base64Test extends TestCase {

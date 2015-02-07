@@ -1,5 +1,6 @@
-package com.dexafree.simplesec;
+package com.dexafree.simplesec.tests;
 
+import com.dexafree.simplesec.MD5;
 import junit.framework.TestCase;
 
 public class MD5Test extends TestCase {
