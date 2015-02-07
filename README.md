@@ -77,7 +77,7 @@ You can either clone the repository and add the 'simplesec' module as a dependen
 ```groovy
 dependencies {
    ...
-   compile 'com.github.dexafree:simplesec:1.0.2'
+   compile 'com.github.dexafree:simplesec:1.0.3'
 }
 ```
 

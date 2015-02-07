@@ -46,7 +46,7 @@ public class TripleDES{
     public static String decrypt(String message, String key) {
 
         try {
-            byte[] realMessage = mBase.decode(message);
+            byte[] realMessage = mBase.decode(message.getBytes());
 
             final MessageDigest md = MessageDigest.getInstance("md5");
             final byte[] digestOfPassword = md.digest(key.getBytes("utf-8"));
