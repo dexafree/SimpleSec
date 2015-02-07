@@ -5,12 +5,9 @@ import java.security.Key;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.apache.commons.codec.binary.Base64;
-
 public class AES {
 
     private static final String ALGORITHM = "AES";
-    private static final Base64 mBase = new Base64();
 
     private static String padKey(String key){
 
@@ -36,7 +33,7 @@ public class AES {
             c.init(Cipher.ENCRYPT_MODE, generatedKey);
 
             byte[] encValue = c.doFinal(valueToEnc.getBytes());
-            byte[] encryptedByteValue = mBase.encode(encValue);
+            byte[] encryptedByteValue = Base64.encodeBytes(encValue);
             String encryptedValue = new String(encryptedByteValue);
 
             return encryptedValue;
@@ -57,7 +54,7 @@ public class AES {
             Cipher c = Cipher.getInstance(ALGORITHM);
             c.init(Cipher.DECRYPT_MODE, generatedKey);
 
-            byte[] decodedValue = mBase.decode(encryptedValue.getBytes());
+            byte[] decodedValue = Base64.decodeBytes(encryptedValue.getBytes());
             byte[] decryptedVal = c.doFinal(decodedValue);
             return new String(decryptedVal);
         } catch (Exception e){
