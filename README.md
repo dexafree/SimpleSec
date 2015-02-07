@@ -1,3 +1,5 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.dexafree/simplesec/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.github.dexafree/simplesec)
+
 # SimpleSec
 
 SimpleSec is a Java library that aims to provide Java and Android developers a very simple way to use some of the most common hash and cipher functions.
@@ -69,6 +71,15 @@ assertEquals(tripleDesDecrypted, myText);
 > ### Important
 > As AES and TripleDES don't actually allow you to pass keys with a length over 32bits, the library will take care of that
 
+## Including it to your project
+You can either clone the repository and add the 'simplesec' module as a dependency, or if you are using Gradle as the build system, you can include it by simply adding this line ti your module's build.gradle:
+
+```groovy
+dependencies {
+   ...
+   compile 'com.github.dexafree:simplesec:1.0.2'
+}
+```
 
 ## Disclaimer
 SimpleSec does not aim to be a super secure way to encrypt your text, but a way to use those common functions in a very simple way.

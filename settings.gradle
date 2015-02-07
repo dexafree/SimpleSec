@@ -1,5 +1,5 @@
 rootProject.name = 'SimpleSec'
-include 'library'
+include 'simplesec'
 
 include 'test'
 

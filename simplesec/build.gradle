@@ -1,0 +1,58 @@
+apply plugin: 'java'
+apply plugin: 'com.bmuschko.nexus'
+
+sourceCompatibility = 1.5
+version = '1.0.2'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'org.bouncycastle:bcprov-jdk15on:1.51'
+}
+
+
+modifyPom {
+    project {
+        name 'SimpleSec'
+        description 'Java library that aims to provide a very simplified way to use criptographic hash and cipher functions'
+        groupId 'com.github.dexafree'
+        url 'https://github.com/dexafree/SimpleSec'
+        inceptionYear '2015'
+
+        scm {
+            url 'https://github.com/dexafree/SimpleSec'
+            connection 'scm:https://git@github.com/dexafree/SimpleSec.git'
+            developerConnection 'scm:git://github.com/dexafree/SimpleSec.git'
+        }
+
+        licenses {
+            license {
+                name 'The Apache Software License, Version 2.0'
+                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                distribution 'repo'
+            }
+        }
+
+        developers {
+            developer {
+                id 'dexafree'
+                name 'Dexafree'
+                email 'contacto@dexa-dev.com'
+            }
+        }
+    }
+}
+
+extraArchive {
+    sources = true
+    tests = true
+    javadoc = true
+}
+
+nexus {
+    sign = true
+}
